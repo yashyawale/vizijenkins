@@ -29,14 +29,14 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- Latest Selenium Java bindings -->
+    <!-- Selenium Java bindings -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>4.20.0</version>
     </dependency>
 
-    <!-- TestNG for test execution -->
+    <!-- TestNG -->
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
@@ -44,14 +44,14 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- WebDriverManager to manage drivers automatically -->
+    <!-- WebDriverManager -->
     <dependency>
       <groupId>io.github.bonigarcia</groupId>
       <artifactId>webdrivermanager</artifactId>
       <version>5.9.0</version>
     </dependency>
 
-    <!-- Simple SLF4J binding for logging -->
+    <!-- SLF4J Simple Logger -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
