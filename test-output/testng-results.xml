@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[ChromeDriver initialized]]>
+    </line>
+    <line>
+      <![CDATA[Navigated to Login page]]>
+    </line>
+    <line>
+      <![CDATA[Entered Email]]>
+    </line>
+    <line>
+      <![CDATA[Entered Password]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on Login button]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on maintenance tickets page]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on maintenance ticket]]>
+    </line>
+    <line>
+      <![CDATA[Entered quote amount]]>
+    </line>
+    <line>
+      <![CDATA[Entered message ]]>
+    </line>
+    <line>
+      <![CDATA[Clicked on accept button]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2025-07-14T10:55:38 IST" name="Default suite" finished-at="2025-07-14T10:55:58 IST" duration-ms="19646">
+    <groups>
+    </groups>
+    <test started-at="2025-07-14T10:55:38 IST" name="Default test" finished-at="2025-07-14T10:55:58 IST" duration-ms="19646">
+      <class name="Vizismart.Automation.SendQuoteBYVendor">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Vizismart.Automation.SendQuoteBYVendor@73eb439a]" started-at="2025-07-14T10:55:38 IST" name="beforeClass" finished-at="2025-07-14T10:55:38 IST" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Vizismart.Automation.SendQuoteBYVendor@73eb439a]" started-at="2025-07-14T10:55:38 IST" name="setUp" finished-at="2025-07-14T10:55:40 IST" duration-ms="2098" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="SendQuote()[pri:0, instance:Vizismart.Automation.SendQuoteBYVendor@73eb439a]" started-at="2025-07-14T10:55:40 IST" name="SendQuote" finished-at="2025-07-14T10:55:58 IST" duration-ms="17364" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[ChromeDriver initialized]]>
+            </line>
+            <line>
+              <![CDATA[Navigated to Login page]]>
+            </line>
+            <line>
+              <![CDATA[Entered Email]]>
+            </line>
+            <line>
+              <![CDATA[Entered Password]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on Login button]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on maintenance tickets page]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on maintenance ticket]]>
+            </line>
+            <line>
+              <![CDATA[Entered quote amount]]>
+            </line>
+            <line>
+              <![CDATA[Entered message ]]>
+            </line>
+            <line>
+              <![CDATA[Clicked on accept button]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- SendQuote -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Vizismart.Automation.SendQuoteBYVendor@73eb439a]" started-at="2025-07-14T10:55:58 IST" name="tearDown" finished-at="2025-07-14T10:55:58 IST" duration-ms="127" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Vizismart.Automation.SendQuoteBYVendor@73eb439a]" started-at="2025-07-14T10:55:58 IST" name="afterClass" finished-at="2025-07-14T10:55:58 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Vizismart.Automation.SendQuoteBYVendor -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
