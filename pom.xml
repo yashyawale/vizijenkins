@@ -36,13 +36,6 @@
       <version>4.20.0</version>
     </dependency>
 
-    <!-- Optional: Selenium DevTools v120 (highest officially available) -->
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-devtools-v120</artifactId>
-      <version>4.20.0</version>
-    </dependency>
-
     <!-- TestNG for test execution -->
     <dependency>
       <groupId>org.testng</groupId>
