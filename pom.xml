@@ -36,10 +36,10 @@
       <version>4.20.0</version>
     </dependency>
 
-    <!-- Selenium DevTools v138 for Chrome 138 -->
+    <!-- Optional: Selenium DevTools v120 (highest officially available) -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-devtools-v138</artifactId>
+      <artifactId>selenium-devtools-v120</artifactId>
       <version>4.20.0</version>
     </dependency>
 
@@ -77,7 +77,6 @@
           <suiteXmlFiles>
             <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
           </suiteXmlFiles>
-          <!-- Ignore test failures to let Jenkins pipeline proceed -->
           <testFailureIgnore>true</testFailureIgnore>
         </configuration>
       </plugin>
