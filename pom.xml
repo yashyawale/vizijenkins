@@ -36,10 +36,10 @@
       <version>4.20.0</version>
     </dependency>
 
-    <!-- Selenium DevTools v138 for Chrome 138 -->
+    <!-- Selenium DevTools v120 for Chrome DevTools Protocol (optional) -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-devtools-v138</artifactId>
+      <artifactId>selenium-devtools-v120</artifactId>
       <version>4.20.0</version>
     </dependency>
 
