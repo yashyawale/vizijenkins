@@ -11,74 +11,84 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>Automation</name>
+  <name>Vizismart Selenium Automation Framework</name>
   <url>http://www.example.com</url>
 
   <properties>
+    <!-- Java compiler version -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
+    <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
+    <selenium.version>4.20.0</selenium.version>
+    <webdrivermanager.version>5.9.0</webdrivermanager.version>
+    <testng.version>7.8.0</testng.version>
+    <slf4j.version>2.0.13</slf4j.version>
   </properties>
 
   <dependencies>
-    <!-- JUnit for unit testing -->
+    <!-- JUnit for legacy unit tests -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
 
-    <!-- Latest Selenium Java bindings -->
+    <!-- Selenium Java (includes core, API, ChromeDriver, FirefoxDriver etc.) -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>4.20.0</version>
+      <version>${selenium.version}</version>
     </dependency>
 
-    <!-- Selenium DevTools v120 for Chrome DevTools Protocol (optional) -->
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-devtools-v120</artifactId>
-      <version>4.20.0</version>
-    </dependency>
-
-    <!-- TestNG for test execution -->
+    <!-- TestNG framework for structured tests -->
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
-      <version>7.8.0</version>
+      <version>${testng.version}</version>
       <scope>test</scope>
     </dependency>
 
-    <!-- WebDriverManager to manage drivers automatically -->
+    <!-- WebDriverManager for automatic driver management -->
     <dependency>
       <groupId>io.github.bonigarcia</groupId>
       <artifactId>webdrivermanager</artifactId>
-      <version>5.9.0</version>
+      <version>${webdrivermanager.version}</version>
     </dependency>
 
-    <!-- Simple SLF4J binding for logging -->
+    <!-- Simple SLF4J logging binding -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
-      <version>2.0.13</version>
+      <version>${slf4j.version}</version>
     </dependency>
   </dependencies>
 
   <build>
     <plugins>
-      <!-- Maven Surefire Plugin for running TestNG tests -->
+      <!-- Maven Compiler Plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version>
+        <configuration>
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
+        </configuration>
+      </plugin>
+
+      <!-- Maven Surefire Plugin for TestNG execution -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M5</version>
+        <version>${maven.surefire.plugin.version}</version>
         <configuration>
           <suiteXmlFiles>
             <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
           </suiteXmlFiles>
-          <!-- Ignore test failures to let Jenkins pipeline proceed -->
-          <testFailureIgnore>true</testFailureIgnore>
+          <testFailureIgnore>true</testFailureIgnore> <!-- Don't fail the build on test failure -->
+          <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
         </configuration>
       </plugin>
     </plugins>
