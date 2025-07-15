@@ -6,9 +6,7 @@
 	<class name="Vizismart.Automation.AddProperty"/>
 	<class name="Vizismart.Automation.LoginOfPM" />
 	<class name="Vizismart.Automation.Feedback" />
-	<class name="Vizismart.Automation.ApproveTicketWithbiddingON"/>
 	<class name="Vizismart.Automation.Add_tenant" />
-	<class name="Vizismart.Automation.Remove_tenant"/>
 	<class name="Vizismart.Automation.RemoveProperty"/>
 	<class name="Vizismart.Automation.EditProfile"/>
 	<class name="Vizismart.Automation.SendQuoteBYVendor"/>
