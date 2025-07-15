@@ -29,14 +29,21 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- Selenium Java bindings -->
+    <!-- Latest Selenium Java bindings -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>4.20.0</version>
     </dependency>
 
-    <!-- TestNG -->
+    <!-- Selenium DevTools v138 for Chrome 138 -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-devtools-v138</artifactId>
+      <version>4.20.0</version>
+    </dependency>
+
+    <!-- TestNG for test execution -->
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
@@ -44,14 +51,14 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- WebDriverManager -->
+    <!-- WebDriverManager to manage drivers automatically -->
     <dependency>
       <groupId>io.github.bonigarcia</groupId>
       <artifactId>webdrivermanager</artifactId>
       <version>5.9.0</version>
     </dependency>
 
-    <!-- SLF4J Simple Logger -->
+    <!-- Simple SLF4J binding for logging -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
@@ -70,6 +77,7 @@
           <suiteXmlFiles>
             <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
           </suiteXmlFiles>
+          <!-- Ignore test failures to let Jenkins pipeline proceed -->
           <testFailureIgnore>true</testFailureIgnore>
         </configuration>
       </plugin>
