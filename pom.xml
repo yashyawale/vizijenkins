@@ -28,6 +28,16 @@
       <version>4.20.0</version>
     </dependency>
 
+<<<<<<< Updated upstream
+=======
+    <!-- Selenium DevTools v138 for Chrome 138.x -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-devtools-v138</artifactId>
+      <version>4.20.0</version>
+    </dependency>
+
+>>>>>>> Stashed changes
     <!-- TestNG for test execution -->
     <dependency>
       <groupId>org.testng</groupId>
@@ -49,6 +59,7 @@
       <artifactId>slf4j-simple</artifactId>
       <version>2.0.13</version>
     </dependency>
+
   </dependencies>
 
   <build>
@@ -83,6 +94,10 @@
         <artifactId>maven-failsafe-plugin</artifactId>
         <version>3.2.5</version>
       </plugin>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     </plugins>
   </build>
 
