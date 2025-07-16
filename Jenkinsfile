@@ -34,7 +34,11 @@ pipeline {
 
         stage('Archive Test Results') {
             steps {
+                // Archive XML test results for Jenkins test report view
                 junit 'target/surefire-reports/*.xml'
+
+                // Optionally archive the HTML report if configured
+                archiveArtifacts artifacts: 'target/site/surefire-report.html', allowEmptyArchive: true
                 archiveArtifacts artifacts: 'target/surefire-reports/*.xml', allowEmptyArchive: true
             }
         }
@@ -46,4 +50,3 @@ pipeline {
         }
     }
 }
-
