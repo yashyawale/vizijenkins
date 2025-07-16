@@ -28,18 +28,19 @@ pipeline {
 
         stage('Run TestNG Tests') {
             steps {
-                sh 'mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testng.xml'
+                // Run tests and generate HTML report
+                sh 'mvn clean test site -Dsurefire.suiteXmlFiles=src/test/resources/testng.xml'
             }
         }
 
         stage('Archive Test Results') {
             steps {
-                // Archive XML test results for Jenkins test report view
+                // Publish JUnit XML results
                 junit 'target/surefire-reports/*.xml'
 
-                // Optionally archive the HTML report if configured
-                archiveArtifacts artifacts: 'target/site/surefire-report.html', allowEmptyArchive: true
+                // Archive both XML and HTML reports
                 archiveArtifacts artifacts: 'target/surefire-reports/*.xml', allowEmptyArchive: true
+                archiveArtifacts artifacts: 'target/site/surefire-report.html', allowEmptyArchive: true
             }
         }
     }
