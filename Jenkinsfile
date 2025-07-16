@@ -34,11 +34,13 @@ pipeline {
 
         stage('Archive Test Results') {
             steps {
-                // Archive XML reports for Jenkins test results
+                // Archive XML test result files for Jenkins to display in "Test Result" tab
                 junit 'target/surefire-reports/*.xml'
 
-                // Archive HTML reports
+                // Archive the Surefire HTML report (viewable from Jenkins artifacts)
                 archiveArtifacts artifacts: 'target/site/surefire-report.html', allowEmptyArchive: true
+
+                // Optionally also archive raw XMLs
                 archiveArtifacts artifacts: 'target/surefire-reports/*.xml', allowEmptyArchive: true
             }
         }
@@ -46,7 +48,7 @@ pipeline {
 
     post {
         always {
-            echo 'Pipeline completed.'
+            echo '✅ Pipeline completed.'
         }
     }
 }
