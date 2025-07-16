@@ -77,7 +77,14 @@
         </configuration>
       </plugin>
 
-      <!-- Optional: Maven Failsafe Plugin for integration tests -->
+      <!-- Maven Site Plugin (fixed version) -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.12.1</version>
+      </plugin>
+
+      <!-- Optional: Failsafe Plugin (for integration tests) -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
@@ -86,7 +93,7 @@
     </plugins>
   </build>
 
-  <!-- Add this section to enable HTML report generation -->
+  <!-- Surefire report plugin to generate HTML reports -->
   <reporting>
     <plugins>
       <plugin>
