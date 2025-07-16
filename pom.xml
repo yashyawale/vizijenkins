@@ -86,4 +86,15 @@
     </plugins>
   </build>
 
+  <!-- Add this section to enable HTML report generation -->
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>3.2.5</version>
+      </plugin>
+    </plugins>
+  </reporting>
+
 </project>
